@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FiixCmms.Client.Cli/FiixCmms.Client.Cli.csproj" />
+  <Project Path="FiixCmms.Client/FiixCmms.Client.csproj" />
+</Solution>

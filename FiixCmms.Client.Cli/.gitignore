@@ -1,0 +1,12 @@
+# Credentials and local configuration
+appsettings.local.json
+
+# Build results
+bin/
+obj/
+*.user
+*.suo
+
+# IDE
+.vs/
+.vscode/
