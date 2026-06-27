@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'PricingTier' table.
 /// </summary>
-public class PricingTier : ClientCmmsDto
+public partial class PricingTier : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolAvailable { get; set; }

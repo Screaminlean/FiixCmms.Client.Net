@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'CalendarEvent' table.
 /// </summary>
-public class CalendarEvent : ClientCmmsDto
+public partial class CalendarEvent : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDate { get; set; }

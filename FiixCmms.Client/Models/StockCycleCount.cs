@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'StockCycleCount' table.
 /// </summary>
-public class StockCycleCount : ClientCmmsDto
+public partial class StockCycleCount : ClientCmmsDto
 {
     public long? Id { get; set; }
     public double? DblPrice { get; set; }

@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetEvent' table.
 /// </summary>
-public class AssetEvent : ClientCmmsDto
+public partial class AssetEvent : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDateSubmitted { get; set; }

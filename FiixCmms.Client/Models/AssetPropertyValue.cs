@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetPropertyValue' table.
 /// </summary>
-public class AssetPropertyValue : ClientCmmsDto
+public partial class AssetPropertyValue : ClientCmmsDto
 {
     public long? Id { get; set; }
     public double? DblElevation { get; set; }

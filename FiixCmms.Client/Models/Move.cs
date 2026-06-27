@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'Move' table.
 /// </summary>
-public class Move : ClientCmmsDto
+public partial class Move : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDateConfirmed { get; set; }

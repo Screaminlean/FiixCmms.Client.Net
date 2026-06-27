@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'CycleCount' table.
 /// </summary>
-public class CycleCount : ClientCmmsDto
+public partial class CycleCount : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolComplete { get; set; }

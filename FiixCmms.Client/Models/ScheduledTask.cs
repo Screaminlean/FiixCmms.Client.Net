@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'ScheduledTask' table.
 /// </summary>
-public class ScheduledTask : ClientCmmsDto
+public partial class ScheduledTask : ClientCmmsDto
 {
     public long? Id { get; set; }
     public double? DblTimeEstimatedHours { get; set; }

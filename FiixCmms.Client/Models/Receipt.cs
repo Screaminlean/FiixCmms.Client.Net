@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'Receipt' table.
 /// </summary>
-public class Receipt : ClientCmmsDto
+public partial class Receipt : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDateOrdered { get; set; }

@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'RFQStatus' table.
 /// </summary>
-public class RFQStatus : ClientCmmsDto
+public partial class RFQStatus : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntSysCode { get; set; }

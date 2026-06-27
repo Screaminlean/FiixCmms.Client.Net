@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'WorkOrderTaskFile' table.
 /// </summary>
-public class WorkOrderTaskFile : ClientCmmsDto
+public partial class WorkOrderTaskFile : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntFileID { get; set; }

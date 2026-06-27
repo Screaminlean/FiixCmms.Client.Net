@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'FileContents' table.
 /// </summary>
-public class FileContents : ClientCmmsDto
+public partial class FileContents : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntSysCode { get; set; }

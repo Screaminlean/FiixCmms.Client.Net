@@ -384,6 +384,46 @@ FiixCmms.Client/
 - [API Reference](https://fiixlabs.github.io/api-documentation/index.html#/ApiDoc)
 - [Fiix Support](https://www.fiixsoftware.com/support)
 
+## MVVM / UI Integration
+
+All model classes (everything under `Models/`) are declared `partial`, so you can extend them in your own project without subclassing.
+
+The recommended pattern for MVVM frameworks such as [CommunityToolkit.Mvvm](https://learn.microsoft.com/dotnet/communitytoolkit/mvvm/) is a **thin ViewModel wrapper** rather than making the model itself observable. This keeps serialization and UI concerns separate:
+
+```csharp
+// ViewModel wraps the API model — clean separation of concerns
+public partial class AssetViewModel : ObservableObject
+{
+    private readonly Asset _asset;
+
+    public AssetViewModel(Asset asset) => _asset = asset;
+
+    [ObservableProperty]
+    private string _name = asset.StrName ?? string.Empty;
+
+    [ObservableProperty]
+    private string _description = asset.StrDescription ?? string.Empty;
+
+    // Write changes back to the model before calling ChangeAsync
+    public Asset ToModel()
+    {
+        _asset.StrName = Name;
+        _asset.StrDescription = Description;
+        return _asset;
+    }
+}
+```
+
+The `partial` keyword also lets you add helper properties or methods directly on the model class in your own codebase if a wrapper is overkill for your use case:
+
+```csharp
+// In your project — not in this library
+public partial class Asset
+{
+    public string DisplayLabel => $"[{intSiteId}] {StrName}";
+}
+```
+
 ## License
 
 This project is licensed under the **Apache License 2.0**. See the [LICENSE](../LICENSE) file for the full text.

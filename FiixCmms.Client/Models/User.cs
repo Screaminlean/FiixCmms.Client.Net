@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'User' table.
 /// </summary>
-public class User : ClientCmmsDto
+public partial class User : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolApiApplicationUser { get; set; }

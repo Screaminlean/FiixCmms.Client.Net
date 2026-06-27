@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetActivityLog' table.
 /// </summary>
-public class AssetActivityLog : ClientCmmsDto
+public partial class AssetActivityLog : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDate { get; set; }

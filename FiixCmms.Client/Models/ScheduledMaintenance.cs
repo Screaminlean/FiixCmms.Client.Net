@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'ScheduledMaintenance' table.
 /// </summary>
-public class ScheduledMaintenance : ClientCmmsDto
+public partial class ScheduledMaintenance : ClientCmmsDto
 {
     public long? Id { get; set; }
     public double? DblSuggestedTime { get; set; }

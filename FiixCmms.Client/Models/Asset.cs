@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'Asset' table.
 /// </summary>
-public class Asset : ClientCmmsDto
+public partial class Asset : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolIsBillToFacility { get; set; }

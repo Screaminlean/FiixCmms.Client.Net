@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'SystemSetting' table.
 /// </summary>
-public class SystemSetting : ClientCmmsDto
+public partial class SystemSetting : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolEnableAllowNegativeStocks { get; set; }

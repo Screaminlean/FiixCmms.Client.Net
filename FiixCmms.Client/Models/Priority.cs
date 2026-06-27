@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'Priority' table.
 /// </summary>
-public class Priority : ClientCmmsDto
+public partial class Priority : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntSysCode { get; set; }

@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetEventType' table.
 /// </summary>
-public class AssetEventType : ClientCmmsDto
+public partial class AssetEventType : ClientCmmsDto
 {
     public long? Id { get; set; }
     public string? StrEventCode { get; set; }

@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'Business' table.
 /// </summary>
-public class Business : ClientCmmsDto
+public partial class Business : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntCountryID { get; set; }

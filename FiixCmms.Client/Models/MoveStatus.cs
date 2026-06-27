@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'MoveStatus' table.
 /// </summary>
-public class MoveStatus : ClientCmmsDto
+public partial class MoveStatus : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntSysCode { get; set; }

@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'Stock' table.
 /// </summary>
-public class Stock : ClientCmmsDto
+public partial class Stock : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntAssetID { get; set; }

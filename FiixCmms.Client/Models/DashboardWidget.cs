@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'DashboardWidget' table.
 /// </summary>
-public class DashboardWidget : ClientCmmsDto
+public partial class DashboardWidget : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntSysCode { get; set; }

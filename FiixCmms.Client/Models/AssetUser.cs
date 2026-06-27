@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetUser' table.
 /// </summary>
-public class AssetUser : ClientCmmsDto
+public partial class AssetUser : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDateAdded { get; set; }

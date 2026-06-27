@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'WorkOrderBusiness' table.
 /// </summary>
-public class WorkOrderBusiness : ClientCmmsDto
+public partial class WorkOrderBusiness : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntAssetID { get; set; }

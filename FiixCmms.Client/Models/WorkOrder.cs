@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'WorkOrder' table.
 /// </summary>
-public class WorkOrder : ClientCmmsDto
+public partial class WorkOrder : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDateCompleted { get; set; }

@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'Currency' table.
 /// </summary>
-public class Currency : ClientCmmsDto
+public partial class Currency : ClientCmmsDto
 {
     public long? Id { get; set; }
     public string? StrDescription { get; set; }

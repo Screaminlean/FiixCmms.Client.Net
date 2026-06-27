@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetCategory' table.
 /// </summary>
-public class AssetCategory : ClientCmmsDto
+public partial class AssetCategory : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntSysCode { get; set; }

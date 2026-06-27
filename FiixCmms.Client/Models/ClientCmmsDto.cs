@@ -4,7 +4,7 @@ namespace FiixCmms.Client.Models;
 /// Base class for all CMMS DTOs. Provides support for extra fields
 /// returned by the API that may not be explicitly defined in the DTO.
 /// </summary>
-public abstract class ClientCmmsDto
+public abstract partial class ClientCmmsDto
 {
     /// <summary>
     /// Gets or sets extra fields that are not explicitly defined in the DTO.

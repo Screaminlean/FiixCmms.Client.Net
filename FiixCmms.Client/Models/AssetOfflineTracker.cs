@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetOfflineTracker' table.
 /// </summary>
-public class AssetOfflineTracker : ClientCmmsDto
+public partial class AssetOfflineTracker : ClientCmmsDto
 {
     public long? Id { get; set; }
     public double? DblProductionHoursAffected { get; set; }

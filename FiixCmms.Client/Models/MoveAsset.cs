@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'MoveAsset' table.
 /// </summary>
-public class MoveAsset : ClientCmmsDto
+public partial class MoveAsset : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolAway { get; set; }

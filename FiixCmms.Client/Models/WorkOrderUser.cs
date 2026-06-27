@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'WorkOrderUser' table.
 /// </summary>
-public class WorkOrderUser : ClientCmmsDto
+public partial class WorkOrderUser : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolNotifyOnAssignment { get; set; }

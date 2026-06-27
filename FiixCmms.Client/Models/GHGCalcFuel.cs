@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'GHGCalcFuel' table.
 /// </summary>
-public class GHGCalcFuel : ClientCmmsDto
+public partial class GHGCalcFuel : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolIsStationary { get; set; }

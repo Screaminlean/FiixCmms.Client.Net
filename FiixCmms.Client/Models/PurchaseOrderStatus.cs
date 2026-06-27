@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'PurchaseOrderStatus' table.
 /// </summary>
-public class PurchaseOrderStatus : ClientCmmsDto
+public partial class PurchaseOrderStatus : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? IntSysCode { get; set; }

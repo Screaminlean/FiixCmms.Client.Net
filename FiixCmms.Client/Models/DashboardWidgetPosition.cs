@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'DashboardWidgetPosition' table.
 /// </summary>
-public class DashboardWidgetPosition : ClientCmmsDto
+public partial class DashboardWidgetPosition : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolLockAspectRatio { get; set; }

@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'AssetClassificationLog' table.
 /// </summary>
-public class AssetClassificationLog : ClientCmmsDto
+public partial class AssetClassificationLog : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDateApplied { get; set; }

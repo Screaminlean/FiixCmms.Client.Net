@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'PurchaseOrderLineItem' table.
 /// </summary>
-public class PurchaseOrderLineItem : ClientCmmsDto
+public partial class PurchaseOrderLineItem : ClientCmmsDto
 {
     public long? Id { get; set; }
     public long? BolAddedDirectlyToPurchaseOrder { get; set; }

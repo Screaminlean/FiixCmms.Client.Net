@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'MeterReading' table.
 /// </summary>
-public class MeterReading : ClientCmmsDto
+public partial class MeterReading : ClientCmmsDto
 {
     public long? Id { get; set; }
     public double? DblMeterReading { get; set; }

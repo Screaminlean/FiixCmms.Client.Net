@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'GHGCalcLocation' table.
 /// </summary>
-public class GHGCalcLocation : ClientCmmsDto
+public partial class GHGCalcLocation : ClientCmmsDto
 {
     public long? Id { get; set; }
     public double? DblGramsPerkWh { get; set; }

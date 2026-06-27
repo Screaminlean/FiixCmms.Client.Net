@@ -3,7 +3,7 @@ namespace FiixCmms.Client.Models;
 /// <summary>
 /// Represents a record in the 'MoveBack' table.
 /// </summary>
-public class MoveBack : ClientCmmsDto
+public partial class MoveBack : ClientCmmsDto
 {
     public long? Id { get; set; }
     public DateTime? DtmDateCanceled { get; set; }
