@@ -19,6 +19,7 @@ A .NET 10 client library for the [Fiix CMMS API](https://fiixlabs.github.io/api-
 - [Design Philosophy](#design-philosophy)
 - [CLI Testing Tool](#cli-testing-tool)
 - [API Compatibility Notes](#api-compatibility-notes)
+- [Community & Support](#community--support)
 - [Resources](#resources)
 - [License](#license)
 
@@ -606,6 +607,10 @@ The implementation has been verified against the official Fiix API documentation
 - API-specific error codes
 
 ---
+
+## Community & Support
+
+Have a question, found a bug, or want to share feedback? Open a thread in [GitHub Discussions](https://github.com/Screaminlean/FiixCmms.Client.Net/discussions).
 
 ## Resources
 
