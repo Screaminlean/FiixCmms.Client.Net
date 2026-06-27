@@ -7,9 +7,9 @@
     <Nullable>enable</Nullable>
 
     <!-- NuGet package metadata -->
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>FiixCmms.Client</PackageId>
-    <Version>1.0.0-beta1</Version>
+    <Version>1.0.0-beta3</Version>
     <Authors>Screaminlean</Authors>
     <Description>A .NET 10 client library for the Fiix CMMS JSON-RPC API. Supports CRUD operations, RPC methods, and Batch requests with HMAC-SHA256 request signing.</Description>
     <PackageTags>fiix;cmms;maintenance;api;client;json-rpc</PackageTags>

@@ -135,7 +135,19 @@ dotnet run -- help               # all available commands
 
 ## Installation
 
-Add a project reference to `FiixCmms.Client`:
+### NuGet (recommended)
+
+[![NuGet](https://img.shields.io/nuget/v/FiixCmms.Client)](https://www.nuget.org/packages/FiixCmms.Client/)
+
+```bash
+dotnet add package FiixCmms.Client
+```
+
+Or search for **FiixCmms.Client** in the Visual Studio NuGet Package Manager.
+
+### From source
+
+Clone the repo and add a project reference:
 
 ```bash
 dotnet add reference ../FiixCmms.Client/FiixCmms.Client.csproj
