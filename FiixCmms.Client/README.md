@@ -367,7 +367,8 @@ FiixCmms.Client/
 │   │   └── PagedResponse<T>
 │   └── Batch/
 │       ├── BatchRequest       List<Request> Requests
-│       └── BatchResponse      List<Response> Responses
+│       ├── BatchResponse      List<SubResponse> Responses
+│       └── SubResponse        Concrete sub-response (Error envelope)
 ├── Models/                    107 DTO classes + ClientCmmsDto base
 ├── Interfaces/                ICredentials, ITransport, IFormat
 ├── Transport/                 HttpTransport (injectable)

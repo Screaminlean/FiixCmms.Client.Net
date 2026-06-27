@@ -6,6 +6,7 @@ A .NET 10 client library for the [Fiix CMMS API](https://fiixlabs.github.io/api-
 
 - [Overview](#overview)
 - [Project Structure](#project-structure)
+- [Local Development (No Fiix Account Needed)](#local-development-no-fiix-account-needed)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Quick Start](#quick-start)
@@ -74,21 +75,61 @@ FiixCmms.Client.Net/
 │   ├── BasicCredentials.cs
 │   └── FiixCmmsClient.cs             # Main client facade
 │
-└── FiixCmms.Client.Cli/              # CLI testing tool
-    ├── Examples/
-    │   ├── Rpc/
-    │   │   ├── AllRpcMethods.cs      # Helpers for all 18 RPC methods
-    │   │   └── ComprehensiveRpcExamples.cs
-    │   ├── CrudExample.cs
-    │   ├── FindExamples.cs
-    │   ├── BatchExamples.cs
-    │   ├── RpcExamples.cs
-    │   ├── TestConnection.cs
-    │   └── DiagnosticsExample.cs
-    ├── Program.cs
-    ├── FiixCmmsSettings.cs
-    └── appsettings.json
+├── FiixCmms.Client.Cli/              # CLI testing tool
+│   ├── Examples/
+│   │   ├── Rpc/
+│   │   │   ├── AllRpcMethods.cs      # Helpers for all 18 RPC methods
+│   │   │   └── ComprehensiveRpcExamples.cs
+│   │   ├── CrudExample.cs
+│   │   ├── FindExamples.cs
+│   │   ├── BatchExamples.cs
+│   │   ├── RpcExamples.cs
+│   │   ├── TestConnection.cs
+│   │   └── DiagnosticsExample.cs
+│   ├── Program.cs
+│   ├── FiixCmmsSettings.cs
+│   └── appsettings.json              # Default: points at local mock API
+│
+└── FiixCmms.MockApi/                 # Local mock API (no Fiix account needed)
+    ├── Auth/
+    │   └── SignatureValidator.cs      # HMAC-SHA256 request validation
+    ├── Handlers/
+    │   ├── CrudHandler.cs            # In-memory CRUD
+    │   ├── RpcHandler.cs             # Mock RPC responses
+    │   └── BatchHandler.cs           # Batch fan-out
+    ├── Store/
+    │   └── InMemoryStore.cs          # Seeded test data
+    ├── appsettings.json              # Mock credentials config
+    └── Program.cs                    # ASP.NET minimal API entrypoint
 ```
+
+---
+
+## Local Development (No Fiix Account Needed)
+
+A fully functional mock API is included. It validates HMAC-SHA256 signatures and serves all CLI commands from an in-memory data store — no Fiix account or sandbox required.
+
+**Terminal 1 — start the mock API:**
+```bash
+cd FiixCmms.MockApi
+dotnet run
+```
+Listens on `http://localhost:5100`. The CLI's default `appsettings.json` already points here.
+
+**Terminal 2 — run CLI commands:**
+```bash
+cd FiixCmms.Client.Cli
+dotnet run -- test-auth          # verify HMAC auth works
+dotnet run -- crud               # full create/update/find/delete cycle
+dotnet run -- find Asset         # list seeded assets
+dotnet run -- rpc                # ping, timezone, sites, custom-fields
+dotnet run -- batch find         # batch find across multiple entity types
+dotnet run -- batch mixed        # mixed RPC + CRUD in one request
+dotnet run -- batch add 20       # transactional batch create
+dotnet run -- help               # all available commands
+```
+
+> To use a **real Fiix instance** instead, create `FiixCmms.Client.Cli/appsettings.local.json` with your credentials — it overrides the defaults automatically. See [`FiixCmms.Client.Cli/README.md`](FiixCmms.Client.Cli/README.md).
 
 ---
 

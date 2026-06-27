@@ -5,6 +5,24 @@
     <RootNamespace>FiixCmms.Client</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <!-- NuGet package metadata -->
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>FiixCmms.Client</PackageId>
+    <Version>1.0.0-beta1</Version>
+    <Authors>Screaminlean</Authors>
+    <Description>A .NET 10 client library for the Fiix CMMS JSON-RPC API. Supports CRUD operations, RPC methods, and Batch requests with HMAC-SHA256 request signing.</Description>
+    <PackageTags>fiix;cmms;maintenance;api;client;json-rpc</PackageTags>
+    <PackageProjectUrl>https://github.com/Screaminlean/FiixCmms.Client.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Screaminlean/FiixCmms.Client.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>

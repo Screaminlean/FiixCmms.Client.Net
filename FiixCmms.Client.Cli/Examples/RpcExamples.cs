@@ -1,3 +1,5 @@
+using System.Text.Json.Nodes;
+using FiixCmms.Client.Api.Rpc;
 using FiixCmms.Client.Cli.Examples.Rpc;
 
 namespace FiixCmms.Client.Cli.Examples;
@@ -139,7 +141,7 @@ public static class RpcExamples
 
         try
         {
-            var response = await AllRpcMethods.CustomFieldsAsync<dynamic>(
+            ParameterizedRpcResponse<JsonNode> response = await AllRpcMethods.CustomFieldsAsync<JsonNode>(
                 client,
                 action: "getWorkOrderCustomFieldsMetaData"
             );

@@ -13,5 +13,5 @@ public class BatchResponse : Response
     /// The order matches the order of requests in the BatchRequest.
     /// </summary>
     [JsonPropertyName("responses")]
-    public List<Response> Responses { get; set; } = new();
+    public List<SubResponse> Responses { get; set; } = new();
 }

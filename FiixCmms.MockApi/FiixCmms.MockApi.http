@@ -1,0 +1,6 @@
+@FiixCmms.MockApi_HostAddress = http://localhost:5126
+
+GET {{FiixCmms.MockApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

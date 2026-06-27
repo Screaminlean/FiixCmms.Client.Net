@@ -40,6 +40,27 @@ FiixCmms__SecretKey
 
 ---
 
+## Local Development (No Fiix Account Required)
+
+A mock API is included in the repo that simulates the Fiix JSON-RPC endpoint with in-memory data.
+The CLI's `appsettings.json` already points at it by default (`http://localhost:5100/api/`).
+
+**Terminal 1:**
+```bash
+dotnet run --project ../FiixCmms.MockApi
+```
+
+**Terminal 2:**
+```bash
+dotnet run -- crud
+dotnet run -- rpc
+dotnet run -- batch find
+```
+
+See [`../FiixCmms.MockApi/README.md`](../FiixCmms.MockApi/README.md) for details.
+
+---
+
 ## Usage
 
 Run all commands from the `FiixCmms.Client.Cli` project directory with `dotnet run -- <command>`.
@@ -234,6 +255,7 @@ case "my-command":
 
 ## Related
 
+- [`../FiixCmms.MockApi/README.md`](../FiixCmms.MockApi/README.md) — Local mock API for testing without real credentials
 - [`../FiixCmms.Client/README.md`](../FiixCmms.Client/README.md) — Library documentation
 - [`../README.md`](../README.md) — Repository overview
 - [Official Fiix API Documentation](https://fiixlabs.github.io/api-documentation/)
