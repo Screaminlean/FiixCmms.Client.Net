@@ -614,10 +614,17 @@ Have a question, found a bug, or want to share feedback? Open a thread in [GitHu
 
 ## Resources
 
-- [Official Fiix API Documentation](https://fiixlabs.github.io/api-documentation/)
+### Fiix Official
+- [Fiix API Documentation](https://fiixlabs.github.io/api-documentation/)
 - [Developer Guide](https://fiixlabs.github.io/api-documentation/guide.html)
 - [API Reference](https://fiixlabs.github.io/api-documentation/index.html#/ApiDoc)
 - [Fiix Support](https://www.fiixsoftware.com/support)
+
+### Java SDK (official reference implementation)
+- [fiix-cmms-client-java](https://github.com/fiixlabs/fiix-cmms-client-java) — official Java client this library is ported from
+- [fiix-cmms-api-java-examples](https://github.com/fiixlabs/fiix-cmms-api-java-examples) — official Java examples (patterns apply directly to this library)
+
+> **Java SDK users:** field names, action strings, filter syntax, and request/response shapes are identical. See the [Java SDK translation guide](FiixCmms.Client/README.md#coming-from-the-java-sdk) in the library README for the small .NET-specific differences.
 
 ---
 

@@ -436,6 +436,67 @@ public partial class Asset
 }
 ```
 
+## Coming from the Java SDK?
+
+This library is a direct .NET port of the [official Fiix Java client](https://github.com/fiixlabs/fiix-cmms-client-java). The [official API documentation](https://fiixlabs.github.io/api-documentation/) and [Java examples](https://github.com/fiixlabs/fiix-cmms-api-java-examples) apply directly — you just need these translation rules:
+
+### Field names — identical
+All DTO field names are identical to the Java SDK (`strName`, `intSiteID`, `bolIsOnline`, etc.). No translation needed.
+
+### Properties instead of getters/setters
+```java
+// Java
+asset.setStrName("Delorean");
+String name = asset.getStrName();
+```
+```csharp
+// C#
+asset.StrName = "Delorean";
+string name = asset.StrName;
+```
+
+### Async instead of synchronous calls
+```java
+// Java
+AddResponse<Asset> response = client.add(request);
+```
+```csharp
+// C#
+var response = await client.AddAsync(request);
+```
+
+### `Prepare*` helpers instead of `new Request<>()`
+```java
+// Java
+AddRequest<Asset> req = new AddRequest<>();
+req.setClassName("Asset");
+req.setFields("id, strName");
+req.setObject(asset);
+```
+```csharp
+// C#
+var req = client.PrepareAdd<Asset>();
+req.Fields = "id, strName";
+req.Object = asset;
+```
+The `Prepare*` helpers set `ClassName` automatically from the generic type — no manual string required.
+
+### Error checking — same shape
+```java
+// Java
+if (response.getError() == null) { ... }
+```
+```csharp
+// C#
+if (response.Error == null) { ... }
+```
+
+### Official references
+- [Fiix API Documentation](https://fiixlabs.github.io/api-documentation/)
+- [Fiix API Developer Guide](https://fiixlabs.github.io/api-documentation/guide.html)
+- [Java Client Source](https://github.com/fiixlabs/fiix-cmms-client-java)
+- [Official Java Examples](https://github.com/fiixlabs/fiix-cmms-api-java-examples)
+
 ## License
 
 This project is licensed under the **Apache License 2.0**. See the [LICENSE](../LICENSE) file for the full text.
